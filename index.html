@@ -215,6 +215,33 @@
     transform: scale(1.24);
     background: #0A0A0A;
   }
+  /* telefon: snimak je traka NA VRHU, tekst ide ispod njega u svom prostoru.
+     Kao pozadina preko celog hero-a naslov bi na kracim ekranima pao na auto. */
+  @media (max-width: 859px) {
+    /* NE lepljiv na telefonu: sadrzaj hero-a ume da preraste nizak ekran, a
+       sticky element visi od svog vrha pa se dno (dugmad!) ne bi moglo doskrolati.
+       Preklop fascikle i dalje radi jer manifest ima negativnu marginu. */
+    .hero {
+      position: relative;
+      padding-top: 78px;
+    }
+    .hero-video {
+      position: static;
+      order: 1;
+      width: 100%;
+      height: clamp(150px, 31svh, 300px);
+      object-fit: contain;
+      object-position: center;
+      transform: none;
+      /* dva auto-margina (ovde i na traci) dele visak prostora na pola,
+         pa blok snimak+tekst stoji opticki centrirano umesto da visi na vrhu */
+      margin-top: auto;
+    }
+    /* veca specificnost: bazna pravila su nize u fajlu pa bi inace pobedila */
+    .hero > .hero-sadrzaj { order: 2; margin-top: 22px; }
+    .hero > .traka { order: 3; margin-top: auto; }
+    .hero .cta-red { gap: 16px; margin-top: 22px; }
+  }
   @media (min-width: 860px) {
     /* desktop: odnosi su bliski, secu se samo prazne crne ivice.
        Snimak se prigusuje jer naslov lezi preko belog auta. */
