@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Boost Performance — Auto servis Inđija · Dekarbonizacija</title>
-<meta name="description" content="Top Boost Performance — auto servis u Inđiji: dekarbonizacija, mali servis, servis kočnica, dijagnostika i pregled vozila, ultrazvučno pranje mehanike, poliranje farova. Termin porukom na Instagram.">
+<title>Rev Tuning — Chiptuning i dijagnostika, Beograd (Borova 40)</title>
+<meta name="description" content="Rev Tuning, Borova 40, Beograd — chiptuning Stage 1, 2 i 3, kodiranje i adaptacije, dijagnostika vozila, gašenje DPF, EGR i AdBlue. Ocena 5,0 na Google mapama. Telefon 065 4141 749.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23212121'/><text x='50' y='72' font-size='58' text-anchor='middle' font-family='Arial Black' font-weight='900' fill='%23FF4D1A'>TB</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23212121'/><text x='50' y='72' font-size='58' text-anchor='middle' font-family='Arial Black' font-weight='900' fill='%23FF3B30'>RT</text></svg>">
 <script>document.documentElement.classList.add('js');</script>
 <style>
   :root {
@@ -20,7 +20,7 @@
     --tekst-tm:   #212121;
     --siva:       #ABABAB;
     --siva-sv:    #D9D9D9;
-    --akcenat:    #FF4D1A;
+    --akcenat:    #FF3B30;
     --akcenat-tx: #131110;
     --lin-tm:     rgba(245,245,245,.16);
     --lin-sv:     #C9C9C9;
@@ -288,7 +288,7 @@
     background: var(--akcenat);
     color: var(--akcenat-tx);
   }
-  .dugme-glavno:hover { background: #FF6236; }
+  .dugme-glavno:hover { background: #FF5A50; }
   .dugme-drugo {
     background: var(--ugalj-2);
     color: var(--tekst-sv);
@@ -369,79 +369,25 @@
   .usluge, .poliranje, .kontakt, .futer { position: relative; z-index: 2; background: var(--ugalj); }
   .kako { position: relative; z-index: 2; }
 
-  /* ---------- pre / posle: poliranje farova ---------- */
+  /* ---------- gde smo ---------- */
   .poliranje { padding: 34px 0 84px; }
   .poliranje h2 { font-size: clamp(32px, 5.4vw, 58px); margin: 18px 0 12px; }
-  .por-uvod { margin: 0 0 26px; color: var(--siva); font-size: 14.5px; max-width: 580px; }
-  .poredi {
-    --poz: 52%;
-    position: relative;
-    aspect-ratio: 16 / 9;
+  .por-uvod { margin: 0 0 8px; color: var(--siva); font-size: 14.5px; max-width: 580px; }
+  .podaci {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 26px;
     max-width: 900px;
-    overflow: hidden;
-    border: 1px solid var(--lin-tm);
-    background: #0f1114;
-    touch-action: pan-y;
+    border-top: 1px solid var(--lin-tm);
   }
-  .poredi:focus-within { outline: 2px solid var(--akcenat); outline-offset: 3px; }
-  .por-sloj { position: absolute; inset: 0; display: grid; place-items: center; }
-  .por-posle { clip-path: inset(0 0 0 var(--poz)); }
-  .far { width: min(84%, 560px); height: auto; display: block; }
-  .f-kuciste    { fill: #0c0d0f; }
-  .f-staklo     { fill: #1b1f25; }
-  .f-prsten     { fill: none; stroke: #454c55; stroke-width: 3; }
-  .f-leca       { fill: #232830; }
-  .f-odsjaj     { fill: #6b747f; }
-  .f-led        { fill: none; stroke: #7d8fa3; stroke-width: 7; stroke-linecap: round; }
-  .f-led-tanka  { fill: none; stroke: #363c44; stroke-width: 4; stroke-linecap: round; }
-  /* zamucen far: zuckast, mutan lak */
-  .por-pre .far { filter: blur(1.8px) sepia(.62) saturate(1.6) hue-rotate(-14deg) brightness(.74); }
-  /* ispoliran: bistro staklo, LED radi */
-  .por-posle .f-led     { stroke: #e8f4ff; }
-  .por-posle .f-odsjaj  { fill: #d5e6f5; }
-  .por-posle .f-prsten  { stroke: #6d7783; }
-  .por-oznaka {
-    position: absolute;
-    bottom: 14px;
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    border: 1px solid var(--lin-tm);
-    padding: 6px 12px;
-    background: rgba(15, 17, 20, .86);
+  @media (min-width: 720px) { .podaci { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .podatak { padding: 18px 4px; border-bottom: 1px solid var(--lin-tm); }
+  @media (min-width: 720px) {
+    .podatak:nth-child(odd)  { border-right: 1px solid var(--lin-tm); padding-right: 24px; }
+    .podatak:nth-child(even) { padding-left: 24px; }
   }
-  .por-pre   .por-oznaka { left: 14px;  color: var(--siva); }
-  .por-posle .por-oznaka { right: 14px; color: var(--tekst-sv); }
-  .por-linija {
-    position: absolute;
-    top: 0; bottom: 0;
-    left: var(--poz);
-    width: 2px;
-    background: var(--akcenat);
-    pointer-events: none;
-  }
-  .por-rucica {
-    position: absolute;
-    top: 50%;
-    left: var(--poz);
-    transform: translate(-50%, -50%);
-    width: 48px; height: 48px;
-    background: var(--akcenat);
-    color: var(--akcenat-tx);
-    display: grid; place-items: center;
-    font-size: 15px; font-weight: 700;
-    clip-path: polygon(0 0, calc(100% - 11px) 0, 100% 100%, 11px 100%);
-    pointer-events: none;
-  }
-  .por-ulaz {
-    position: absolute;
-    inset: 0;
-    width: 100%; height: 100%;
-    margin: 0;
-    opacity: 0;
-    cursor: ew-resize;
-  }
+  .podatak p { margin: 8px 0 0; font-size: 19px; font-weight: 600; }
+  .podatak a { text-decoration-color: var(--akcenat); text-decoration-thickness: 2px; }
   .blueprint {
     border: 1px solid var(--lin-sv);
     padding: 34px 26px 30px;
@@ -634,8 +580,8 @@
   }
   .futer-red a:hover { color: var(--akcenat); }
   .placeholder {
-    background: rgba(255,77,26,.16);
-    color: #FFB49A;
+    background: rgba(255, 59, 48,.16);
+    color: #FFB3AE;
     padding: 1px 6px;
     font-weight: 600;
   }
@@ -678,20 +624,21 @@
 
 <header class="vrh">
   <div class="okvir">
-    <a class="brend" href="#" aria-label="Top Boost Performance — vrh strane">
-      <span class="b1">Top Boost</span>
-      <span class="b2">Performance</span>
+    <a class="brend" href="#" aria-label="Rev Tuning — vrh strane">
+      <span class="b1">Rev</span>
+      <span class="b2">Tuning</span>
     </a>
     <nav aria-label="Glavna navigacija">
       <ul>
         <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#gde-smo">Gde smo</a></li>
         <li><a href="#kako">Kako radimo</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
-    <a class="ig" href="https://www.instagram.com/top_boost_performance/" target="_blank" rel="noopener" aria-label="Instagram — @top_boost_performance">
+    <a class="ig" href="https://www.instagram.com/revtuning.rs/" target="_blank" rel="noopener" aria-label="Instagram — @revtuning.rs">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
-      <span>@top_boost_performance</span>
+      <span>@revtuning.rs</span>
     </a>
   </div>
 </header>
@@ -709,45 +656,45 @@
     <div class="hero-mreza" aria-hidden="true"></div>
     <div class="okvir">
       <div class="hero-meta meta">
-        <span>Auto servis · Inđija</span>
+        <span>Chiptuning · Beograd</span>
         <span class="plus" aria-hidden="true">+</span>
-        <span>Ref. TBP-01</span>
+        <span>Ref. RT-01</span>
       </div>
     </div>
 
     <div class="okvir hero-sadrzaj">
-      <h1 class="naslov-d">Dekarbonizacija i servis <span class="nag">u&nbsp;Inđiji</span></h1>
-      <p class="hero-pod">Svaki tretman snimamo — snimke tretmana pogledaj na našem Instagram profilu, pa tačno vidiš šta se radi.</p>
+      <h1 class="naslov-d">Chiptuning i dijagnostika <span class="nag">u&nbsp;Beogradu</span></h1>
+      <p class="hero-pod">Stage 1, 2 i 3, kodiranje i adaptacije, dijagnostika vozila. Borova 40 — ocena 5,0 na Google mapama.</p>
       <div class="cta-red">
         <span class="cta-blok">
-          <span class="cta-meta">Ref. DM-01 · Instagram</span>
-          <a class="dugme dugme-glavno" href="https://ig.me/m/top_boost_performance" target="_blank" rel="noopener">Pošalji poruku <span aria-hidden="true">-&gt;</span></a>
+          <span class="cta-meta">Ref. TEL-01 · Pozovi</span>
+          <a class="dugme dugme-glavno" href="tel:+381654141749">065 4141 749 <span aria-hidden="true">-&gt;</span></a>
         </span>
         <span class="cta-blok">
-          <span class="cta-meta">Ref. DM-02 · Profil</span>
-          <a class="dugme dugme-drugo" href="https://www.instagram.com/top_boost_performance/" target="_blank" rel="noopener">Pogledaj tretmane</a>
+          <span class="cta-meta">Ref. DM-02 · Instagram</span>
+          <a class="dugme dugme-drugo" href="https://www.instagram.com/revtuning.rs/" target="_blank" rel="noopener">Pogledaj radove</a>
         </span>
       </div>
     </div>
 
     <div class="traka" aria-hidden="true">
       <div class="okvir">
-        <p>Dekarbonizacija<span class="tac">·</span>Mali servis<span class="tac">·</span>Servis kočnica<span class="tac">·</span>Dijagnostika<span class="tac">·</span>Ultrazvučno pranje<span class="tac">·</span>Poliranje farova</p>
+        <p>Stage 1, 2, 3<span class="tac">·</span>Chiptuning<span class="tac">·</span>Kodiranje i adaptacije<span class="tac">·</span>Dijagnostika vozila<span class="tac">·</span>DPF, EGR, AdBlue</p>
       </div>
     </div>
   </section>
 
   <!-- ============ MANIFEST — blueprint kartica ============ -->
   <section class="manifest">
-    <span class="man-tab">Fig. 01 / Zašto snimamo</span>
+    <span class="man-tab">Fig. 01 / Ocena</span>
     <div class="okvir">
       <div class="blueprint reg otkrij">
-        <div class="meta"><span>Dokaz umesto priče</span><span>Ref. TBP-02</span></div>
-        <h2 class="naslov-d">Servis koji pokazuje šta radi</h2>
-        <p>Svaki tretman koji uradimo — snimimo. Snimke tretmana objavljujemo na
-        našem Instagram profilu, pa tačno vidiš kako postupak izgleda. Bez priče
-        napamet: pogledaš snimke, pošalješ poruku, dogovorimo termin.</p>
-        <p><a href="https://www.instagram.com/top_boost_performance/" target="_blank" rel="noopener">Snimci tretmana — @top_boost_performance</a></p>
+        <div class="meta"><span>Google mape</span><span>Ref. RT-02</span></div>
+        <h2 class="naslov-d">Ocena 5,0 iz 19 recenzija</h2>
+        <p>Toliko ljudi je do sada ocenilo radionicu na Google mapama, i prosek je
+        pun. Kad biraš kome ćeš ostaviti auto, to je podatak koji govori više od
+        svakog opisa — zato stoji na prvom mestu.</p>
+        <p><a href="https://www.google.com/maps/search/Rev+Tuning+Borova+40+Beograd" target="_blank" rel="noopener">Pogledaj recenzije na Google mapama</a></p>
       </div>
     </div>
   </section>
@@ -756,106 +703,71 @@
   <section class="usluge" id="usluge">
     <div class="okvir">
       <div class="usluge-vrh">
-        <span class="folder-tab">Usluge / Indeks 01–06</span>
+        <span class="folder-tab">Usluge / Indeks 01–04</span>
       </div>
       <h2 class="naslov-d">Šta radimo</h2>
 
       <div class="stog">
         <article class="fascikla" style="--i:0">
-          <span class="fas-tab" aria-hidden="true">01 Dekarbonizacija</span>
+          <span class="fas-tab" aria-hidden="true">01 Chiptuning</span>
           <span class="broj-zig" aria-hidden="true">01</span>
-          <h3>Dekarbonizacija</h3>
-          <p>Tretman uklanjanja naslaga iz motora.</p>
+          <h3>Chiptuning — Stage 1, 2 i 3</h3>
+          <p>Izmena fabričke mape motora, u tri nivoa.</p>
           <span class="ref meta">Ref. S-01</span>
         </article>
         <article class="fascikla" style="--i:1">
-          <span class="fas-tab" aria-hidden="true">02 Mali servis</span>
+          <span class="fas-tab" aria-hidden="true">02 Kodiranje</span>
           <span class="broj-zig" aria-hidden="true">02</span>
-          <h3>Mali servis</h3>
-          <p>Redovno održavanje vozila, po dogovoru.</p>
+          <h3>Kodiranje i adaptacije</h3>
+          <p>Kodiranje i adaptacije upravljačkih jedinica.</p>
           <span class="ref meta">Ref. S-02</span>
         </article>
         <article class="fascikla" style="--i:2">
-          <span class="fas-tab" aria-hidden="true">03 Kočnice</span>
+          <span class="fas-tab" aria-hidden="true">03 Dijagnostika</span>
           <span class="broj-zig" aria-hidden="true">03</span>
-          <h3>Servis kočnica</h3>
-          <p>Pregled i servis kočionog sistema.</p>
+          <h3>Dijagnostika vozila</h3>
+          <p>Očitavanje grešaka i provera elektronike.</p>
           <span class="ref meta">Ref. S-03</span>
         </article>
         <article class="fascikla" style="--i:3">
-          <span class="fas-tab" aria-hidden="true">04 Dijagnostika</span>
+          <span class="fas-tab" aria-hidden="true">04 DPF · EGR · AdBlue</span>
           <span class="broj-zig" aria-hidden="true">04</span>
-          <h3>Dijagnostika i pregled vozila</h3>
-          <p>Očitavanje grešaka i provera stanja vozila.</p>
+          <h3>Gašenje DPF, EGR i AdBlue</h3>
+          <p>Isključivanje sistema za obradu izduvnih gasova.</p>
           <span class="ref meta">Ref. S-04</span>
-        </article>
-        <article class="fascikla" style="--i:4">
-          <span class="fas-tab" aria-hidden="true">05 Ultrazvuk</span>
-          <span class="broj-zig" aria-hidden="true">05</span>
-          <h3>Ultrazvučno pranje mehanike</h3>
-          <p>Dubinsko čišćenje delova ultrazvukom.</p>
-          <span class="ref meta">Ref. S-05</span>
-        </article>
-        <article class="fascikla" style="--i:5">
-          <span class="fas-tab" aria-hidden="true">06 Farovi</span>
-          <span class="broj-zig" aria-hidden="true">06</span>
-          <h3>Poliranje farova</h3>
-          <p>Vraćanje providnosti zamućenim farovima.</p>
-          <span class="ref meta">Ref. S-06</span>
         </article>
       </div>
 
-      <p class="usluge-nap">Cene i slobodni termini — <a href="https://ig.me/m/top_boost_performance" target="_blank" rel="noopener">porukom na Instagram</a>.</p>
+      <p class="usluge-nap">Cene i slobodni termini — <a href="tel:+381654141749">pozovi 065 4141 749</a>.</p>
     </div>
   </section>
 
-  <!-- ============ PRE / POSLE — poliranje farova ============ -->
-  <section class="poliranje" id="poliranje">
+  <!-- ============ GDE SMO ============ -->
+  <section class="poliranje" id="gde-smo">
     <div class="okvir">
       <div class="usluge-vrh">
-        <span class="folder-tab">Fig. 02 / Poliranje farova</span>
+        <span class="folder-tab">Fig. 02 / Gde smo</span>
       </div>
-      <h2 class="naslov-d">Zamućen far, pa ispoliran</h2>
-      <p class="por-uvod">Povuci klizač i uporedi. Ovo je ilustracija postupka —
-        zamenićemo je fotografijama iz servisa.</p>
+      <h2 class="naslov-d">Borova 40, Beograd</h2>
+      <p class="por-uvod">Pozovi pre dolaska da proverimo ima li slobodnog termina.</p>
 
-      <div class="poredi otkrij" id="poredi">
-        <div class="por-sloj por-pre">
-          <svg class="far" viewBox="0 0 560 280" role="img" aria-label="Far pre poliranja — zamućen">
-            <path class="f-kuciste" d="M24 104 L300 34 L500 78 L536 150 L470 244 L150 236 L28 178 Z"/>
-            <path class="f-staklo"  d="M46 112 L300 50 L488 92 L518 150 L462 226 L160 218 L50 170 Z"/>
-            <circle class="f-prsten" cx="182" cy="146" r="54"/>
-            <circle class="f-leca"   cx="182" cy="146" r="33"/>
-            <circle class="f-odsjaj" cx="169" cy="133" r="11"/>
-            <circle class="f-prsten" cx="336" cy="134" r="42"/>
-            <circle class="f-leca"   cx="336" cy="134" r="25"/>
-            <circle class="f-odsjaj" cx="326" cy="124" r="8"/>
-            <path class="f-led"      d="M64 154 L252 98 L468 126"/>
-            <path class="f-led-tanka" d="M126 202 L302 192 L440 202"/>
-          </svg>
-          <span class="por-oznaka">Pre</span>
+      <div class="podaci otkrij">
+        <div class="podatak">
+          <span class="meta">Adresa</span>
+          <p><a href="https://www.google.com/maps/search/Rev+Tuning+Borova+40+Beograd" target="_blank" rel="noopener">Borova 40, Beograd</a></p>
         </div>
-
-        <div class="por-sloj por-posle">
-          <svg class="far" viewBox="0 0 560 280" role="img" aria-label="Far posle poliranja — bistar">
-            <path class="f-kuciste" d="M24 104 L300 34 L500 78 L536 150 L470 244 L150 236 L28 178 Z"/>
-            <path class="f-staklo"  d="M46 112 L300 50 L488 92 L518 150 L462 226 L160 218 L50 170 Z"/>
-            <circle class="f-prsten" cx="182" cy="146" r="54"/>
-            <circle class="f-leca"   cx="182" cy="146" r="33"/>
-            <circle class="f-odsjaj" cx="169" cy="133" r="11"/>
-            <circle class="f-prsten" cx="336" cy="134" r="42"/>
-            <circle class="f-leca"   cx="336" cy="134" r="25"/>
-            <circle class="f-odsjaj" cx="326" cy="124" r="8"/>
-            <path class="f-led"      d="M64 154 L252 98 L468 126"/>
-            <path class="f-led-tanka" d="M126 202 L302 192 L440 202"/>
-          </svg>
-          <span class="por-oznaka">Posle</span>
+        <div class="podatak">
+          <span class="meta">Telefon</span>
+          <p><a href="tel:+381654141749">065 4141 749</a></p>
         </div>
-
-        <span class="por-linija" aria-hidden="true"></span>
-        <span class="por-rucica" aria-hidden="true">&#8596;</span>
-        <input class="por-ulaz" id="por-ulaz" type="range" min="0" max="100" value="52" step="1"
-               aria-label="Poređenje fara pre i posle poliranja — levo je pre, desno posle">
+        <div class="podatak">
+          <span class="meta">Radno vreme</span>
+          <p><span class="placeholder">[dopuniti]</span></p>
+        </div>
+        <div class="podatak">
+          <span class="meta">Instagram</span>
+          <p><a href="https://www.instagram.com/revtuning.rs/" target="_blank" rel="noopener">@revtuning.rs</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -863,28 +775,28 @@
   <!-- ============ KAKO RADIMO ============ -->
   <section class="kako" id="kako">
     <div class="okvir">
-      <span class="meta">Postupak · Ref. TBP-03</span>
+      <span class="meta">Postupak · Ref. RT-03</span>
       <h2 class="naslov-d">Kako do termina</h2>
       <div class="koraci">
         <div class="korak otkrij">
           <span class="kbr" aria-hidden="true">01</span>
           <div>
-            <h3>Pošalješ poruku</h3>
-            <p>Napiši šta ti treba i koje je vozilo — direktno u Instagram DM.</p>
+            <h3>Pozoveš nas</h3>
+            <p>Kažeš koje je vozilo i šta ti treba — Stage, kodiranje ili dijagnostika.</p>
           </div>
         </div>
         <div class="korak otkrij">
           <span class="kbr" aria-hidden="true">02</span>
           <div>
             <h3>Dogovorimo termin</h3>
-            <p>Odgovaramo u DM — dogovor oko termina i svega što te zanima.</p>
+            <p>Dogovor oko termina, cene i svega što te zanima pre dolaska.</p>
           </div>
         </div>
         <div class="korak otkrij">
           <span class="kbr" aria-hidden="true">03</span>
           <div>
-            <h3>Tretman — i snimak</h3>
-            <p>Uradimo posao — a kako tretmani izgledaju, vidiš u snimcima na profilu.</p>
+            <h3>Dođeš na Borovu 40</h3>
+            <p>Uradimo dogovoreni posao u radionici.</p>
           </div>
         </div>
       </div>
@@ -895,18 +807,18 @@
   <section class="kontakt" id="kontakt">
     <div class="okvir">
       <div class="kontakt-kart reg otkrij">
-        <h2 class="naslov-d">Piši nam</h2>
-        <p>Nalazimo se u Inđiji. Termin i sva pitanja — porukom na Instagram.</p>
+        <h2 class="naslov-d">Zovi</h2>
+        <p>Radionica je na Borovoj 40 u Beogradu. Termin i sva pitanja — telefonom.</p>
         <div class="cta-red">
           <span class="cta-blok">
-            <span class="cta-meta">Ref. DM-01 · Instagram</span>
-            <a class="dugme dugme-glavno" href="https://ig.me/m/top_boost_performance" target="_blank" rel="noopener">Pošalji poruku <span aria-hidden="true">-&gt;</span></a>
+            <span class="cta-meta">Ref. TEL-01 · Pozovi</span>
+            <a class="dugme dugme-glavno" href="tel:+381654141749">065 4141 749 <span aria-hidden="true">-&gt;</span></a>
           </span>
         </div>
         <ul class="cipovi">
-          <li>Inđija</li>
-          <li>Odgovaramo u DM</li>
-          <li><a href="https://www.instagram.com/top_boost_performance/" target="_blank" rel="noopener">@top_boost_performance</a></li>
+          <li>Borova 40, Beograd</li>
+          <li>★ 5,0 · 19 recenzija</li>
+          <li><a href="https://www.instagram.com/revtuning.rs/" target="_blank" rel="noopener">@revtuning.rs</a></li>
         </ul>
       </div>
     </div>
@@ -917,13 +829,13 @@
 <footer class="futer">
   <div class="okvir">
     <div class="futer-red">
-      <span>© 2026 Top Boost Performance · Inđija</span>
+      <span>© 2026 Rev Tuning · Beograd</span>
       <a href="politika-privatnosti.html">Politika privatnosti</a>
       <span>PIB: <span class="placeholder">[dopuniti]</span> · MB: <span class="placeholder">[dopuniti]</span></span>
     </div>
   </div>
   <svg class="wordmark" viewBox="0 0 1000 150" aria-hidden="true" focusable="false">
-    <text x="0" y="128" font-size="158" textLength="1000" lengthAdjust="spacingAndGlyphs">TOP BOOST</text>
+    <text x="0" y="128" font-size="158" textLength="1000" lengthAdjust="spacingAndGlyphs">REV TUNING</text>
   </svg>
 </footer>
 
@@ -962,16 +874,6 @@
       }, { threshold: .15 }).observe(v);
     }
     pusti();
-  })();
-
-  /* ---------- klizac pre/posle (poliranje farova) ---------- */
-  (function () {
-    const box = document.getElementById('poredi');
-    const ulaz = document.getElementById('por-ulaz');
-    if (!box || !ulaz) return;
-    const postavi = () => box.style.setProperty('--poz', ulaz.value + '%');
-    ulaz.addEventListener('input', postavi);
-    postavi();
   })();
 
   /* ---------- reveal na skrol ---------- */
